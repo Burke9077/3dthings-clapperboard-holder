@@ -86,7 +86,7 @@ module dowel() {
     dowelDiameter = 8.15 + dowelMargin;
 
     rotate([0,90,0]) {
-        cylinder(h=dowelLength, d1=dowelDiameter, d2=dowelDiameter, center=true, $fn=10);
+        cylinder(h=dowelLength, d1=dowelDiameter, d2=dowelDiameter, center=true, $fn=100);
     }
 }
 
@@ -97,7 +97,7 @@ module screwhole(screwLength) {
 
     union() {
         rotate([90,0,0]) {
-            cylinder(h=screwLength, d1=4, d2=4, center=true, $fn=10);
+            cylinder(h=screwLength, d1=4, d2=4, center=true, $fn=100);
         }
         translate([0,(screwLength/2)-(screwHeadDepressionSize/2),0]) {
             rotate([270,0,0]) {
